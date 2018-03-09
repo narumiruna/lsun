@@ -17,7 +17,7 @@ __license__ = 'MIT'
 def list_categories(tag):
     url = 'http://lsun.cs.princeton.edu/htbin/list.cgi?tag=' + tag
     f = urlopen(url)
-    return json.loads(f.read())
+    return json.loads(f.read().decode('utf-8'))
 
 
 def download(out_dir, category, set_name, tag):
